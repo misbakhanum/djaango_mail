@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Email</title>
+</head>
+<body>
+    <h2>Email Sending Form</h2>
+    
+    {% if message %}
+        <p style="color: green;">{{ message }}</p>
+    {% endif %}
+    
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Send Email</button>
+    </form>
+</body>
+</html>
